@@ -13,7 +13,7 @@ mongoose
   .then(() => console.log("몽고 연결 성공!"))
   .catch((err) => console.log("몽고 에러 발생!", err));
 
-app.get("/", (req, res) => res.send("node.js와 express를 활용한 서버 구축"));
+app.get("/", (req, res) => res.send("서버 연결 성공"));
 
 // 클라이언트에서 분석해서 가져옴(application/x-www-form-urlencoded)
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -95,4 +95,4 @@ app.get("/api/users/logout", auth, (req, res) => {
 });
 
 // listen 상태이면 함수 실행
-app.listen(port, () => console.log(`이 앱은 포트번호 ${port}에서 동작합니다.`));
+app.listen(port, () => console.log(`포트번호: ${port}`));
